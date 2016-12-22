@@ -108,7 +108,7 @@ imf_codes <- function(codelist, return_raw = FALSE, times = 3) {
     else return(raw_dl)
 }
 
-#' Download an data from the IMF
+#' Download a data from the IMF
 #'
 #' @param database_id character string database ID. Can be found using
 #' \code{\link{imf_ids}}.
@@ -123,8 +123,8 @@ imf_codes <- function(codelist, return_raw = FALSE, times = 3) {
 #' @param end year for which you would like to end gathering the data.
 #' @param freq character string indicating the series frequency. With
 #' \code{'A'} for annual, \code{'Q'} for quarterly, and \code{'M'} for monthly.
-#' @param return_raw logical. Whether to return the data list
-#' a data frame with just the requested data series.
+#' @param return_raw logical. Whether to return the data
+#' as an unprocessed list.
 #' @param print_url logical. Whether to print the URL used in the API call.
 #' Can be useful for debugging.
 #' @param times numeric. Maximum number of requests to attempt.
@@ -152,7 +152,7 @@ imf_codes <- function(codelist, return_raw = FALSE, times = 3) {
 #' @export
 
 imf_data <- function(database_id, indicator, country = 'all',
-                     start = 2000, end = 2013,
+                     start = 2000, end = current_year(),
                      freq = 'A', return_raw = FALSE, print_url = FALSE,
                      times = 3)
 {
@@ -175,8 +175,10 @@ imf_data <- function(database_id, indicator, country = 'all',
                                    start = start, end = end,
                                    freq = freq, return_raw = return_raw,
                                    print_url = print_url)
-        if (nrow(one_series) == 0) stop('No data found.', call. = FALSE)
-        rownames(one_series) <- NULL
+        if (is.data.frame(one_series)) {
+            if (nrow(one_series) == 0) stop('No data found.', call. = FALSE)
+            rownames(one_series) <- NULL
+        }
         return(one_series)
     }
     else if (length(indicator) > 1) {
