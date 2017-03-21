@@ -30,4 +30,10 @@ a data frame with just the requested data metadata.}
 \description{
 Access meta data for specific country-series
 }
+\examples{
+\dontrun{
+imf_metadata(database_id = 'IFS', indicator = 'EREER_IX',
+             start = 2001, end = 2001, country = 'CN')
+}
 
+}

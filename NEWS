@@ -1,5 +1,11 @@
 # All updates will be detailed here
 
+## Version 0.1.4
+
+- Resolved bug where `imf_metadata` produced malformed API calls. #9
+
+- Documentation improvements.
+
 ## Version 0.1.3
 
 - Bug fix for IMF API call using default user agent to `GET`. Thanks to

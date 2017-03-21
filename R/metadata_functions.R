@@ -56,14 +56,13 @@ imf_metastructure <- function(database_id, return_raw = FALSE) {
 #' @param return_raw logical. Whether to return the raw metadata
 #' a data frame with just the requested data metadata.
 #'
+#' @examples
+#' \dontrun{
+#' imf_metadata(database_id = 'IFS', indicator = 'EREER_IX',
+#'              start = 2001, end = 2001, country = 'CN')
+#' }
 #'
 #' @export
-
-#database_id = 'IFS'
-#indicator = 'EREER_IX'
-#start = 2012
-#end = 2012
-#country = c('GB', 'CN')
 
 imf_metadata <- function(database_id, indicator, country = 'all',
                      start = 2000, end = current_year(), return_raw = FALSE)
@@ -83,7 +82,7 @@ imf_metadata <- function(database_id, indicator, country = 'all',
     for (u in 1:length(country)) {
         country_sub <- country[u] %>% unlist
         country_sub <- paste(country_sub, sep = '', collapse = '+')
-        URL <- sprintf('http://dataservices.imf.org/REST/SDMX_JSON.svc/GenericMetadata/%s/%s.%s?startPeriod=%s&endPeriod=%s',
+        URL <- sprintf('http://dataservices.imf.org/REST/SDMX_JSON.svc/GenericMetadata/%s/.%s.%s?startPeriod=%s&endPeriod=%s',
             database_id, country, indicator, start, end)
         raw_dl <- download_parse(URL)
 
