@@ -1,10 +1,10 @@
 Package: imfr
 Type: Package
 Title: Download Data from the International Monetary Fund's Data API
-Version: 0.1.4
+Version: 0.1.5
 Description: Explore and download data from the International Monetary Fund's
     data API <http://data.imf.org/>.
-Date: 2016-03-20
+Date: 2016-11-17
 Authors@R: c(
     person("Christopher", "Gandrud", email = "christopher.gandrud@gmail.com",
     role = c("aut", "cre"))
@@ -16,8 +16,8 @@ Imports: dplyr, httr (>= 1.2.0), jsonlite
 LazyData: TRUE
 RoxygenNote: 6.0.1
 NeedsCompilation: no
-Packaged: 2017-03-20 21:39:02 UTC; cgandrud
+Packaged: 2017-11-17 16:52:00 UTC; christophergandrud
 Author: Christopher Gandrud [aut, cre]
 Maintainer: Christopher Gandrud <christopher.gandrud@gmail.com>
 Repository: CRAN
-Date/Publication: 2017-03-21 06:50:44 UTC
+Date/Publication: 2017-11-17 17:23:57 UTC
