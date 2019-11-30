@@ -9,17 +9,17 @@
 #' dataflow list is returned.
 #'
 #' @examples
-#' imf_ids()
+#' head(imf_ids())
 #'
 #' @export
 
 imf_ids <- function(return_raw = FALSE, times = 3) {
-    URL <- 'https://sdmxcentral.imf.org/ws/public/sdmxapi/rest/Dataflow?format=sdmx-json'
+    URL <- 'http://dataservices.imf.org/REST/SDMX_JSON.svc/Dataflow?format=sdmx-json'
     raw_dl <- download_parse(URL)
 
     if (!isTRUE(return_raw)) {
-        data_id <- raw_dl$Dataflow$id
-        long_name <- unlist(sapply(raw_dl$Dataflow$names, `[`, "value"))
+        data_id <- raw_dl$Structure$Dataflows$Dataflow$KeyFamilyRef$KeyFamilyID
+        long_name <- raw_dl$Structure$Dataflows$Dataflow$Name$`#text`
         id_name <- data.frame(database_id = data_id, description = long_name)
         return(id_name)
     }
@@ -155,6 +155,8 @@ imf_data <- function(database_id, indicator, country = 'all',
                      freq = 'A', return_raw = FALSE, print_url = FALSE,
                      times = 3)
 {
+    if (!isTRUE(inherits(indicator, "character")))
+        stop("indicator must be a character string or vector.")
     if (length(indicator) > 1 & isTRUE(return_raw))
         stop('return_raw only works with one indicator at a time',
              call. = FALSE)

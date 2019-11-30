@@ -1,8 +1,8 @@
-bfe8c73add29fedc9c9f5073f006ec9f *DESCRIPTION
+98f715ca157c021b70f3ed5db7d37e75 *DESCRIPTION
 9d2c88e1a757bcbfea40713f00a240f4 *NAMESPACE
-a7e24749c450c565126931d985daf97e *NEWS
+cd749ca5bd5aed21ea73765cfe6750aa *NEWS
 3ddce57832609363a9a4266dced6648f *R/all_iso2c.R
-ec776b8ba8d188d191890420213358f3 *R/data_functions.R
+d027000af12d444391ce75ea8de13935 *R/data_functions.R
 fa8a5ef6a27c167feb2634f57a7135b0 *R/metadata_functions.R
 f8b71d7f12a6bc3b6da69e9537d94ef9 *R/utils.R
 0981d51407ab054f5b98540cfdee258a *README.md
@@ -12,7 +12,7 @@ f733aa284d9f4c041bbf40ab4f4583e1 *data/all_iso2c.rda
 750ab03c9aa7ac32740a3496d422ad70 *man/current_year.Rd
 c8cba938642c6d0dded3484695d76b21 *man/imf_codelist.Rd
 00a2a91cf5a14321b10a305014b96418 *man/imf_codes.Rd
-471d657fc3c9c02ccad27ff9bf06c8b1 *man/imf_data.Rd
-fae81fae66b2794424d60434eeaa3e8c *man/imf_ids.Rd
-e9eb8d4e425158b290a193bff94e6dc3 *man/imf_metadata.Rd
+1170066c5de5497df11c97ce4a63e274 *man/imf_data.Rd
+6589be54ea110356a64d82d7b6e5bc02 *man/imf_ids.Rd
+a7de77ed783340d5d779f7e30daecbeb *man/imf_metadata.Rd
 0ed8543c1d86c178fed0b2e72d37d5ae *man/imf_metastructure.Rd
