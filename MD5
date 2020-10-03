@@ -1,10 +1,10 @@
-0825bd806ba3812b691ca59166ea14e6 *DESCRIPTION
+ebba3ee9bd0c24b2160dcdf8da8fc53a *DESCRIPTION
 9d2c88e1a757bcbfea40713f00a240f4 *NAMESPACE
-6c7c12d8f7b4acb4779253b6ab4293ee *NEWS
+9f653ce3e15499db97776cea7aa8bf75 *NEWS
 592ad4e72eb84d6a0b2bf5799e3f359a *R/all_iso2c.R
 59cac217b4fa91bb324fc36fdca89921 *R/data_functions.R
 fa8a5ef6a27c167feb2634f57a7135b0 *R/metadata_functions.R
-b641efc1526d5ca374946bc3935c4d36 *R/utils.R
+2b53fe5e8ea198587b1cc5971844ed3b *R/utils.R
 0981d51407ab054f5b98540cfdee258a *README.md
 61abc3b9da0b8fad3af743a63790b4c7 *data/all_iso2c.csv
 14df3a4f79c3ad048be6c406747bbe25 *data/all_iso2c.rda
@@ -17,4 +17,4 @@ c8cba938642c6d0dded3484695d76b21 *man/imf_codelist.Rd
 a7de77ed783340d5d779f7e30daecbeb *man/imf_metadata.Rd
 0ed8543c1d86c178fed0b2e72d37d5ae *man/imf_metastructure.Rd
 ffc6bbea88778b7eca3416d1573bf438 *tests/testthat.R
-e71fa5bfaa487fad65904d03dd791014 *tests/testthat/test-next.R
+b3e79d5b68e20246590aab69cd52e775 *tests/testthat/test-next.R
